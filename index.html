@@ -400,7 +400,7 @@ const CUMPLES = [
   [8,8,"Sofía","Flores","Líder de Cadena de Suministro"],[20,8,"Carla","Ciocca","Jefe de Desarrollo de Ingeniería"],[29,8,"María José","Gondonneau","Diseñador UX/UI"],[5,8,"Martín","Klempau","Gerente de Desarrollo y Expansión"],[19,8,"Tomás","Molina","Jefe Desarrollo Nuevos Negocios"],[28,8,"Durlys","Luna","Jefe de Proyectos Socios"],[19,8,"Lukas","Orellana","Ingeniero de Proyectos"],[12,8,"Tomás","Donoso","Analista de Desarrollo Organizacional"],
   [18,9,"Nicolás","Arcos","Jefe de Ingeniería Conceptual EERR"],[1,9,"Almendra","Soza","Ingeniero Gestión SSEE"],[17,9,"Cristian","Maldonado","Especialista Senior de Automatización"],[4,9,"Maximiliano","Mellado","Ingeniero Especialista Térmico"],[19,9,"Myriam","Bauer","Ingeniero de Proyectos SSEE"],[14,9,"Katherine","Avarias","Jefe de Desarrollo de Producto y Proveedores"],[6,9,"Alex","Cifuentes","Líder Inteligencia Energética Acuícola"],[20,9,"Jassiel","Rivera","Especialista IoT"],
   [3,10,"Javiera","Cárdenas","Ingeniero de Proyectos SSEE"],[8,10,"Rodolfo","Clementi","Subgerente de Proyectos en Clientes y Servicio Técnico"],[8,10,"Pablo","Contreras","Ingeniero Especialista EERR"],[10,10,"Andrea","Castañeda","Coordinadora Comercial Socios PyME"],[13,10,"Bastián","Escribano","Desarrollador Full Stack Senior"],[14,10,"Marcelo","Martínez","Jefe de Proyectos"],[20,10,"Gonzalo","Carbonare","Ingeniero Riesgo Operacional"],[24,10,"Diego","González","Ingeniero de Proyectos"],[29,10,"Andre","Lamagdelaine","Subgerente Desarrollo Comercial Gran Industria"],[29,10,"Eduardo","Nicolau del Roure","Jefe Despliegue Tecnológico"],
-  [1,11,"Ricardo","Silva","Coordinador Comercial Socios PyME"],[11,11,"Marco","Rubio","Jefe Zonal de Servicio Técnico"],[29,11,"Diego","Gallegos","Ingeniero Full Stack"],[27,11,"Karis","Letelier","Jefe Desarrollo Nuevos Negocios"],[27,11,"Cristopher","Ávalos","Jefe de Riesgo Operacional"],[18,11,"Luis","Gorigoitía","Subgerente SyS Effitec"],[18,11,"Gonzalo","Hansen","Ingeniero Full Stack"],[5,11,"Nicolás","Leyton","Ingeniero Full Stack"],
+  [11,6,"Jorge","Jara","Subgerente Energías Renovables y Soluciones Térmicas"],[11,11,"Marco","Rubio","Jefe Zonal de Servicio Técnico"],[29,11,"Diego","Gallegos","Ingeniero Full Stack"],[27,11,"Karis","Letelier","Jefe Desarrollo Nuevos Negocios"],[27,11,"Cristopher","Ávalos","Jefe de Riesgo Operacional"],[18,11,"Luis","Gorigoitía","Subgerente SyS Effitec"],[18,11,"Gonzalo","Hansen","Ingeniero Full Stack"],[5,11,"Nicolás","Leyton","Ingeniero Full Stack"],
   [7,12,"Loreto","Peña","Ingeniero de Desarrollo Civil"],[29,12,"Gustavo","Caamaño","Jefe de Ingeniería Conceptual Térmica"],[21,12,"Pablo","Oliva","Ingeniero de Proyectos"],[30,12,"Nicole","Abarca","Jefa de Control de Gestión"],[11,12,"Diego","Maira","Jefe de Desarrollo de Nuevas Soluciones"],[28,12,"Diego","Lavín","Subgerente de Finanzas"],[16,12,"Felipe","Hernández","Jefe Comercial de Soluciones Térmicas"],[3,12,"Sebastián","Aldunate","Consultor Energético"],[23,12,"Lucas","Ulcen","Ingeniero Full Stack Developer Junior"],[6,12,"Werner","Fica","Consultor Energético"],[22,12,"Gabriel","Vásquez","Ingeniero de Proyectos SSEE"],[15,12,"Matías","Gálvez","Ejecutivo Comercial Soluciones IE"],[20,12,"Ángela","Zañartu","Analista de Desarrollo Organizacional"]
 ];
 
@@ -417,12 +417,12 @@ const FOTOS = {
 };
 function foto(n, a, cls) { const src = FOTOS[`${n} ${a}`]; return src ? `<img class="${cls}" src="${src}" alt="${esc(n)} ${esc(a)}">` : `<div class="${cls} ini">${iniciales(n + " " + a)}</div>`; }
 
-/* Dotación vigente (nómina 5 nov 2026, sin cargos por cubrir) */
+/* Dotación vigente (estructura 20 nov 2026, actualizada 24 nov; sin cargos por cubrir ni ZOFRI) */
 const ZOFRI = 29;
 const GERENCIAS = [
-  { nombre: "Gerencia de Negocios", corto: "Negocios", gerente: "Víctor Ríos", cargo: "Gerente de Negocios", n: 35,
+  { nombre: "Gerencia de Negocios", corto: "Negocios", gerente: "Víctor Ríos", cargo: "Gerente de Negocios", n: 36,
     areas: ["Servicios Energéticos", "Energías Renovables y Soluciones Térmicas", "Nuevas Soluciones", "Inteligencia Comercial", "Marketing"],
-    lideres: [["Natali Montes","Líder de Servicios Energéticos"],["Diego Hidalgo","Subgerente Inteligencia Comercial"],["Diego Maira","Jefe de Desarrollo de Nuevas Soluciones"],["Andrés Senn","Jefe Comercial Renovables y Almacenamiento"],["Felipe Hernández","Jefe Comercial de Soluciones Térmicas"]] },
+    lideres: [["Jorge Jara","Subgerente Energías Renovables y Soluciones Térmicas"],["Diego Hidalgo","Subgerente Inteligencia Comercial"],["Natali Montes","Líder de Servicios Energéticos"],["Diego Maira","Jefe de Desarrollo de Nuevas Soluciones"],["Andrés Senn","Jefe Comercial Renovables y Almacenamiento"]] },
   { nombre: "Gerencia de Ingeniería y Proyectos", corto: "Ingeniería y Proyectos", gerente: "Nelson Poque", cargo: "Gerente de Ingeniería y Proyectos", n: 26,
     areas: ["Ingeniería en Clientes", "SyS Effitec", "Riesgo Operacional", "Inteligencia Accionable", "Proyectos en Clientes y Servicio Técnico", "Proyectos Socios"],
     lideres: [["Francisco Arancibia","Subgerente de Ingeniería en Clientes"],["Luis Gorigoitía","Subgerente SyS Effitec"],["Cristopher Ávalos","Jefe de Riesgo Operacional"],["Eduardo Letelier","Subgerente de Inteligencia Accionable"],["Rodolfo Clementi","Subgerente de Proyectos en Clientes y Serv. Técnico"]] },
@@ -503,7 +503,7 @@ function mesTop() {
 const TRIVIA = [
   { q: "Completa la frase: Inteligencia Energética para…", o: ["…ahorrar energía", "…transformar industrias", "…cuidar el planeta", "…conectar personas"], ok: 1, a: "“Inteligencia Energética para transformar industrias”: es lo que hacemos en abastibletec." },
   { q: "¿Cuántos años cumplió abastibletec en noviembre de 2026?", o: ["1 año", "2 años", "3 años", "5 años"], ok: 1, a: "¡2 años! Partimos en noviembre de 2024." },
-  { q: "¿Cuántas personas somos hoy en abastibletec?", o: ["86", "112", "135", "160"], ok: 1, a: () => `Somos ${INTERNOS} personas en las seis gerencias, la Subgerencia Legal y la Gerencia General.` },
+  { q: "¿Cuántas personas somos hoy en abastibletec?", o: ["86", "113", "135", "160"], ok: 1, a: () => `Somos ${INTERNOS} personas en las seis gerencias, la Subgerencia Legal y la Gerencia General.` },
   { q: "¿Cuál es la gerencia con más personas?", o: ["Desarrollo Tecnológico", "Negocios", "Ingeniería y Proyectos", "Administración y Finanzas"], ok: 1, a: () => `La Gerencia de Negocios, con ${GERENCIAS[0].n} personas.` },
   { q: "¿Qué mes concentra más cumpleaños en ATEC?", o: () => ["Enero", "Abril", "Junio", "Diciembre"], ok: () => ["Enero","Abril","Junio","Diciembre"].indexOf(MESES_C[mesTop()[0] - 1]), a: () => `${MESES_C[mesTop()[0] - 1]}, con ${mesTop()[1]} cumpleaños. ¡Prepárense para celebrar!` },
   { q: "¿Qué es un BESS?", o: ["Un panel solar flexible", "Un sistema de almacenamiento de energía en baterías", "Un medidor inteligente", "Una caldera eléctrica"], ok: 1, a: "BESS viene del inglés Battery Energy Storage System: almacena energía en baterías para usarla cuando se necesita." },
@@ -695,7 +695,7 @@ const LAMINAS = [
       </section>`; } },
 
   { grupo: "Nuestra gente", barras: true, html: () => {
-      const rows = [...GERENCIAS.map(g => [g.corto, g.n]), ["Gerencia General", GG]];
+      const rows = [...GERENCIAS.map(g => [g.corto, g.n]).sort((a, b) => b[1] - a[1]), ["Gerencia General", GG]];
       const max = Math.max(...rows.map(r => r[1]));
       const html = rows.map(([l, n]) => `<div class="bar-row"><div class="lbl">${esc(l)}</div><div class="track"><div class="fill" data-w="${n / max * 100}"></div></div><div class="val tnum">${n}</div></div>`).join("");
       return `<section class="slide">
