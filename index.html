@@ -159,15 +159,16 @@ h1, h2, h3 { margin: 0; text-wrap: balance; font-family: var(--sans); }
 
 
 /* EtMday */
-.etm { display: grid; grid-template-columns: 640px 1fr; gap: 48px; margin-top: 8px; height: 716px; }
+.etm { display: grid; grid-template-columns: 640px 1fr; gap: 48px; margin-top: 8px; height: 652px; }
+.etm-pie { margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 24px; color: var(--ink-muted); }
 .etm-logo { display: inline-block; background: #0c3a1e; border-radius: var(--r-lg); padding: 14px 22px 12px; margin-top: 22px; }
 .etm-logo img { height: 74px; display: block; }
-.etm .lead { font-size: 23px; line-height: 1.4; color: var(--ink-muted); margin: 22px 0 0; }
+.etm .lead { font-size: 25px; line-height: 1.45; color: var(--ink-muted); margin: 22px 0 0; }
 .etm .lead + .lead { margin-top: 10px; }
 .etm .lead b { color: var(--ink); font-weight: 500; }
 .etm-q { margin-top: 20px; border-radius: var(--r-lg); background: var(--surface-alt); border: 1px solid var(--border); padding: 24px 34px 22px; }
 .etm-q.vacia { border: 2px dashed var(--border); background: transparent; }
-.etm-q .f { font-size: 23px; line-height: 1.4; font-weight: 400; text-wrap: pretty; }
+.etm-q .f { font-size: 24px; line-height: 1.45; font-weight: 400; text-wrap: pretty; }
 .etm-q .f .g { color: var(--green); font-weight: 500; }
 .etm-q .f .qm { color: var(--green); font-weight: 700; }
 .etm-q.vacia .f { color: var(--ink-subtle); font-style: italic; font-size: 30px; }
@@ -684,13 +685,13 @@ const LAMINAS = [
         <div class="etm">
           <div style="min-width:0">
             <div class="etm-logo rise d1"><img src="${e.logo}" alt="EtMday 2026 · Emprende tu Mente"></div>
-            <p class="lead rise d2">El <b>encuentro internacional de innovación, emprendimiento e inversión más grande de Latinoamérica</b>, organizado por Emprende tu Mente.</p>
-            <p class="lead rise d2">Nos representaron <b>Ignacio Mackenna, Martín Klempau, Tomás Molina, Juan Pablo Contardo y Karis Letelier</b>, en una jornada de encuentros importantes con el ecosistema de innovación.</p>
+            <p class="lead rise d2">El encuentro internacional de innovación, emprendimiento e inversión más grande de Latinoamérica, organizado por Emprende tu Mente.</p>
             ${vacia ? "" : `<div class="etm-q rise d3"><div class="f">${frase}</div>
               <div class="who"><div class="bar"></div><div><div class="name">${esc(e.autor)}</div><div class="muted">${esc(e.cargo)}</div></div></div></div>`}
           </div>
           <div class="etm-fotos rise d2">${e.fotos.map(f => `<img src="${f}" alt="abastibletec en el EtMday 2026">`).join("")}</div>
         </div>
+        <div class="etm-pie rise d3">Nos representaron: Ignacio Mackenna · Martín Klempau · Tomás Molina · Juan Pablo Contardo · Karis Letelier</div>
       </section>`; } },
 
   { grupo: "Nuestra gente", barras: true, html: () => {
